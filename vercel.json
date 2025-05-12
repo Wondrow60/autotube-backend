@@ -1,14 +1,13 @@
 {
-  "builds": [
-    {
-      "src": "api/main.py",
-      "use": "@vercel/python"
+  "functions": {
+    "api/*.py": {
+      "runtime": "python3.9"
     }
-  ],
+  },
   "routes": [
     {
-      "src": "/early-access",
-      "dest": "/api/main.py"
+      "src": "/api/early-access",
+      "dest": "/api/early-access.py"
     }
   ]
 }
